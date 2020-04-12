@@ -5,8 +5,8 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "WEBSITE")
-public class Website {
+@Table(name = "TEST")
+public class Test {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -21,10 +21,10 @@ public class Website {
     @Column(name ="DESCRIPTION")
     private String description;
 
-    public Website() {
+    public Test() {
     }
 
-    public Website(String url, String title, String description) {
+    public Test(String url, String title, String description) {
         this.url = url;
         this.title = title;
         this.description = description;
@@ -65,12 +65,12 @@ public class Website {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Website)) return false;
-        Website website = (Website) o;
-        return Objects.equals(getId(), website.getId()) &&
-                Objects.equals(getUrl(), website.getUrl()) &&
-                Objects.equals(getTitle(), website.getTitle()) &&
-                Objects.equals(getDescription(), website.getDescription());
+        if (!(o instanceof Test)) return false;
+        Test test = (Test) o;
+        return Objects.equals(getId(), test.getId()) &&
+                Objects.equals(getUrl(), test.getUrl()) &&
+                Objects.equals(getTitle(), test.getTitle()) &&
+                Objects.equals(getDescription(), test.getDescription());
     }
 
     @Override
