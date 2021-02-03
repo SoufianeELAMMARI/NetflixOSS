@@ -14,7 +14,7 @@ public class UserController {
     @Autowired
     UserService userService;
 
-    @GetMapping("/check")
+    @GetMapping("/getAll")
     public Map<String,String> getAll(){
         return userService.getAll();
     }

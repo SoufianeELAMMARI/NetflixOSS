@@ -21,10 +21,10 @@ public class TestController {
      @Value("${me}")
      private String author;
 
-    @GetMapping("/getAll")
+  /*  @GetMapping("/getAll")
     public List<Test> getAll(){
         return testService.getAll();
-    }
+    }*/
 
     @GetMapping("/check")
     public Map<String,String> getConfig(){
